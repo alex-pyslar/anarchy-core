@@ -1,7 +1,10 @@
 package domain
 
-// Player represents a game player. Currently, it's directly linked to a User.
 type Player struct {
-	ID       string // Player ID (same as User ID)
-	Username string // Player's username
+	ID         int     `db:"id"`
+	UserID     int     `db:"user_id"`
+	X          float64 `db:"x"`
+	Y          float64 `db:"y"`
+	Z          float64 `db:"z"`
+	PlayerName string  `db:"name"`
 }
